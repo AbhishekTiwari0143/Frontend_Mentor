@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+      defer
+    ></script>
+    <script src="script.js" defer></script>
+
+    <title>Frontend Mentor | E-commerce product page</title>
+
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <header
+      class="p-6 pb-12 w-screen mb-6 md:border-b-[1px] md:border-b-slate-400 max-w-[1200px] m-auto"
+    >
+      <div class="flex gap-4 justify-between">
+        <div class="menu flex gap-2">
+          <img
+            class="menu-img md:hidden"
+            src="images/icon-menu.svg"
+            alt="menu image"
+          />
+          <img class="" src="images/logo.svg" alt="img" />
+        </div>
+        <ul class="nav-links hidden md:flex gap-6">
+          <li class=" border"><a href="#">Collections</a></li>
+          <li class=" border"><a href="#">Men</a></li>
+          <li class=" border"><a href="#">Women</a></li>
+          <li class=" border"><a href="#">About</a></li>
+          <li class=" border"><a href="#">Contact</a></li>
+        </ul>
+
+        <div class="profile relative flex gap-6">
+          <img
+            class="cart cursor-pointer"
+            src="images/icon-cart.svg"
+            alt="image icon"
+          />
+
+          <!-- checkout Cart  -->
+          <div
+            class="cart-container fixed top-[4rem] left-0 h-auto bg-white p-6 shadow z-[10] rounded-2xl opacity-0 md:left-[70%] md:right-0 md:w-[360px] md:top-[5rem]"
+          >
+            <div class="cart-name border-b-[1px] border-b-gray-300 pb-4">
+              Cart
+            </div>
+            <div class="empty-cart relative w-full h-full opacity-1">
+              <div class="w-[300px] h-[200px] flex justify-center items-center">
+                your cart is empty
+              </div>
+            </div>
+
+            <div class="filledCart hide">
+              <div class="item-in-cart items-center flex flex-row gap-2 my-2">
+                <div class="cart-img w-1/4">
+                  <img
+                    class="rounded-2xl"
+                    src="images/image-product-1-thumbnail.jpg"
+                    alt="image thumbnail"
+                  />
+                </div>
+
+                <div class="text w-3/4">
+                  <h1 class="text-[1rem] text-gray-600 font-semibold">
+                    Fall Limited Edition Sneakers
+                  </h1>
+                  <h2 class="text-gray-500 font-semibold">
+                    $125.00 x <span class="quantity">1 </span>
+                    <span class="total-value text-black">$125</span>
+                  </h2>
+                </div>
+                <img
+                  class="delete cursor-pointer"
+                  src="images/icon-delete.svg"
+                  alt="image delete"
+                />
+              </div>
+
+              <!-- Checkout button -->
+              <div
+                class="checkout-button flex justify-center items-center bg-orange-400 py-4 rounded-2xl gap-2"
+              >
+                <button class="text-white font-semibold text-sm" type="button">
+                  Checkout
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <img
+            class="w-6 md:w-8"
+            src="images/image-avatar.png"
+            alt="image avtar"
+          />
+        </div>
+      </div>
+    </header>
+
+    <div
+      class="md:max-w-[970px] m-auto main-content md:flex gap-8 mt-20 md:items-center mb-20 z-[5]"
+    >
+      <section class="left-picture-side relatives md:w-1/2">
+        <div class="swiper relative">
+          <div
+            id="lg-swipper"
+            class="swiper-wrapper image-coursel flex rounded-2xl"
+          >
+            <div class="swiper-slide slides">
+              <img
+                class="rounded-2xl"
+                src="images/image-product-1.jpg"
+                alt="product1"
+              />
+            </div>
+            <div class="swiper-slide slides">
+              <img
+                class="rounded-2xl"
+                src="images/image-product-2.jpg"
+                alt="product1"
+              />
+            </div>
+            <div class="swiper-slide slides">
+              <img
+                class="rounded-2xl"
+                src="images/image-product-3.jpg"
+                alt="product1"
+              />
+            </div>
+            <div class="swiper-slide slides">
+              <img
+                class="rounded-2xl"
+                src="images/image-product-4.jpg"
+                alt="product1"
+              />
+            </div>
+          </div>
+          <img
+            class="swiper-button-prev rounded-full md:hidden"
+            src="images/icon-previous.svg"
+            alt="image previous"
+          />
+          <img
+            class="swiper-button-next rounded-full md:hidden"
+            src="images/icon-next.svg"
+            alt="image next"
+          />
+
+          <!-- pagination custom bullets -->
+          <div
+            class="hidden w-[100%] h-20 swiper2 md:flex justify-between mt-8"
+          ></div>
+        </div>
+      </section>
+
+      <section class="right-text-side flex flex-col gap-8 px-2 py-4 md:w-1/2">
+        <div class="title">
+          <h4
+            class="text-xs font-semibold tracking-wider uppercase text-orange-500"
+          >
+            Sneaker Company
+          </h4>
+          <h1 class="text-3xl font-semibold">Fall Limited Edition Sneakers</h1>
+        </div>
+
+        <p class="text-[.9rem] text-gray-600">
+          These low-profile sneakers are your perfect casual wear companion.
+          Featuring a durable rubber outer sole, they’ll withstand everything
+          the weather can offer.
+        </p>
+        <div class="price flex md:flex-col justify-between items-baseline">
+          <div class="main flex items-center">
+            <h1 class="text-3xl font-semibold">$125.00</h1>
+            <h2
+              class="p-1 text-orange-600 bg-orange-200 text-sm font-semibold ml-6"
+            >
+              50%
+            </h2>
+          </div>
+          <h2 class="text-gray-400 font-semibold line-through">$250.00</h2>
+        </div>
+
+        <div
+          class="checkout-container flex flex-col md:flex-row w-[100%] m-auto gap-6"
+        >
+          <div
+            class="indigator flex justify-between bg-slate-100 items-center px-6 py-4 rounded-2xl md:w-1/2"
+          >
+            <p class="minus cursor-pointer">
+              <img src="images/icon-minus.svg" />
+            </p>
+            <h1 id="value">1</h1>
+            <p class="plus cursor-pointer">
+              <img src="images/icon-plus.svg" />
+            </p>
+          </div>
+          <div
+            class="button flex justify-center items-center bg-orange-400 py-4 rounded-2xl gap-2 md:w-1/2"
+          >
+            <img class="text-white" src="images/icon-cart.svg" />
+            <button
+              class="add-to-cart text-white font-semibold text-sm"
+              type="button"
+            >
+              Add to cart
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="lightbox overflow-hidden">
+      <div
+        class="overlay -z-10 fixed w-[100vw] h-[100vh] top-0 left-0 bg-[#00000098] opacity-0"
+      >
+        <div
+          class=" relative w-[500px] h-[500px] top-[50%] left-[50%] translat"
+        >
+          <div class="swiper3 fixed top-0 left-0 w-[500px] h-[500px]">
+            <div class="swiper-wrapper image-coursel flex rounded-2xl">
+              <div class="swiper-slide">
+                <img
+                  class="rounded-2xl"
+                  src="images/image-product-1.jpg"
+                  alt="product1"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="rounded-2xl"
+                  src="images/image-product-2.jpg"
+                  alt="product1"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="rounded-2xl"
+                  src="images/image-product-3.jpg"
+                  alt="product1"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="rounded-2xl"
+                  src="images/image-product-4.jpg"
+                  alt="product1"
+                />
+              </div>
+            </div>
+            
+
+            <!-- pagination custom bullets -->
+            <div
+              class="hidden w-[100%] h-20 swiper4 md:flex justify-between mt-8"
+            ></div>
+          </div>
+          <img
+              class="swiper-button-prev2 absolute top-0 left-0 w-10 h-10 rounded-full md:hidden"
+              src="images/icon-previous.svg"
+              alt="image previous"
+            />
+            <img
+              class="swiper-button-next2 absolute top-0 left-0 w-10 h-10 rounded-full md:hidden"
+              src="images/icon-next.svg"
+              alt="image next"
+            />
+        </div>
+    </div>
+    <!-- 
+  0
+  Add to cart
+   -->
+  </body>
+</html>
