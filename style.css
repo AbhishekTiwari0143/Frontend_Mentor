@@ -4,6 +4,7 @@
 
 body {
   font-family: serif;
+  overflow-x: hidden;
 }
 
 /* color header bg rgb(61 190 255) */
@@ -83,4 +84,7 @@ body {
 }
 .block-text-md {
   padding: 5rem 4rem;
+}
+.navShow {
+  transition: all 0.3s;
 }
