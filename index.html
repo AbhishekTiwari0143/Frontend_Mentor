@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div class="container m-auto">
+      <nav role="heading" class="relative w-100vw flex justify-between">
+        <div class="logo relative flex mobile-nav">
+          <img class="mr-8" src="./images/logo.svg" alt="logo image" />
+
+          <ul class="relative side-nav nav-links md:flex">
+            <div class="menu-close md:hidden">
+              <img src="images/icon-close-menu.svg" alt="menu image" />
+            </div>
+            <li class="relative flex gap-1 items-center">
+              <a href="#" id="feature">Features</a>
+
+              <img class="feature-img-down" src="images/icon-arrow-down.svg" />
+              <img class="feature-img-up hide" src="images/icon-arrow-up.svg" />
+              <!--  -->
+              <!-- Dropdown -->
+              <ul
+                id="feature-dropdown"
+                class="hide absolute top-[2rem] right-[0] flex flex-col p-4 bg-white z-10 rounded-md shadow gap-4"
+              >
+                <li class="flex gap-3" href="#">
+                  <img class="h-[80%]" src="images/icon-todo.svg" /> Todo List
+                </li>
+                <li class="flex gap-3" href="#">
+                  <img class="h-[80%]" src="images/icon-calendar.svg" />Calender
+                </li>
+                <li class="flex gap-3" href="#">
+                  <img
+                    class="h-[80%]"
+                    src="images/icon-reminders.svg"
+                  />Remainder
+                </li>
+                <li class="flex gap-3" href="#">
+                  <img class="h-[80%]" src="images/icon-planning.svg" />Planning
+                </li>
+              </ul>
+            </li>
+
+            <li class="relative flex gap-1 items-center">
+              <a href="#" id="Company">Company</a>
+              <img class="company-img-down" src="images/icon-arrow-down.svg" />
+              <img class="company-img-up hide" src="images/icon-arrow-up.svg" />
+              <!--  -->
+              <!-- Dropdown -->
+              <ul
+                id="company-dropdown"
+                class="hide absolute top-[2rem] left-[0%] flex flex-col p-4 bg-white rounded-md shadow gap-4"
+              >
+                <li href="#">History</li>
+                <li href="#">Our Team</li>
+                <li href="#">Blog</li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#">Careers</a>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="button hidden md:block">
+          <a href="#" class="login mr-6">Login</a>
+          <a
+            href="#"
+            class="register px-4 py-2 border-[1px] border-gray-500 rounded-xl active:border-[1px] active:border-black"
+            >Register</a
+          >
+        </div>
+
+        <div class="menu md:hidden">
+          <img src="images/icon-menu.svg" alt="menu image" />
+        </div>
+      </nav>
+
+      <!--  -->
+      <!--  -->
+
+      <main
+        role="landing-content"
+        class="max-w-[950px] m-auto flex flex-col justify-between md:flex-row-reverse md:pt-12"
+      >
+        <div>
+          <img
+            class="w-[100vw] my-4 mt-0 -z-1 md:hidden"
+            src="images/image-hero-mobile.png"
+            alt="image"
+          />
+        </div>
+        <img
+          class="hidden md:block w-[40%]"
+          src="images/image-hero-desktop.png"
+          alt="image"
+        />
+        <div class="text-container flex flex-col md:justify-between">
+          <div class="space-y-2 text-center tracking-wider md:text-left">
+            <h1
+              class="text-[2.125rem] font-bold md:text-[4.125rem] md:leading-[4rem] tracking-wide md:mt-8 md:mb-12"
+            >
+              Make <br class="hidden md:block" />
+              remote work
+            </h1>
+            <p
+              class="flex text-gray-400 text-[1rem] leading-6 md:max-w-[70%] mb-12"
+            >
+              Get your team in sync, no matter your location. Streamline
+              processes, create team rituals, and watch productivity soar.
+            </p>
+            <button
+              type="button"
+              class="mt-12 px-3 py-3 text-sm rounded-xl tracking-wider self-center bg-black text-white font-bold md:self-baseline active:bg-white active:text-black active:border-[1px] active:border-black"
+            >
+              Learn more
+            </button>
+          </div>
+          <div role="Clients" class="flex justify-between px-6 mt-12">
+            <img class="w-12" src="images/client-databiz.svg" alt="client" />
+            <img class="w-12" src="images/client-audiophile.svg" alt="client" />
+            <img class="w-12" src="images/client-meet.svg" alt="client" />
+            <img class="w-12" src="images/client-maker.svg" alt="client" />
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Abhishek</a>.
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
